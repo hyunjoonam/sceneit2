@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     aintSceneItList: DataTypes.BOOLEAN
   }, {});
   Usermovie.associate = function(models) {
-    Usermovie.belongsTo(models.User);
     Usermovie.belongsTo(models.Movie);
+    Usermovie.belongsTo(models.User);
   };
   return Usermovie;
 };
