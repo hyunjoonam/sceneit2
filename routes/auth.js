@@ -15,8 +15,10 @@ const setupAuth = (app) => {
     }));
 
     passport.use(new GitHubStrategy({
-        clientID: process.env.GITHUB_ID,
-        clientSecret: process.env.GITHUB_SECRET,
+        clientID: "75e98565fb885d842b56", 
+        // process.env.GITHUB_ID,
+        clientSecret: "7424e30131cb46de420fc3dbfb49df6375e80257",
+        // process.env.GITHUB_SECRET,
         callbackURL: "http://localhost:3000/github/auth"
         }, (accessToken, refreshToken, profile, done) => {
         console.log(profile);
