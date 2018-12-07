@@ -1,2 +1,15 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+{{#if isLoggedIn}}
+<h4>Welcome Back {{user.github_id}}</h4>
+<a href="/search.html">go to search</a>
+
+{{/if}}
+
+{{#unless isLoggedIn}}
+	<div class="fitzlogin">
+		<img src="./images/sceneittoo.png"/>
+    </div>
+    <div class="loginbutton">
+		<a class="bbtn btn-warning btn-lg btn-block round" href="/login/github" role="button">LOGIN</a>
+    </div>
+{{/unless}}
